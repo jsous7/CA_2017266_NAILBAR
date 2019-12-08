@@ -1,3 +1,6 @@
+/** All the code and subroutines are based on the code of Mikhail Timofeev,
+ * the reference code is on github: https://github.com/mikhail-cct/CA1-In-class-Demo.git */
+
 const fs = require('fs'),
     xmlParse = require('xslt-processor').xmlParse,
     xsltProcess = require('xslt-processor').xsltProcess;
@@ -26,7 +29,6 @@ module.exports = {
         //todo: logic to update the element
     },
 
-    /** There is an issue to be fixed */
     delete: (req, res) => {
         // Function to read in XML file and convert it to JSON
         function xmlFileToJs(filename, cb) {

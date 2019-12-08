@@ -1,93 +1,72 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?xml-stylesheet type="text/xsl" href="Structure.xsl"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <nailbar>
-    <services name="Manicure">
-        <entree>
-            <item>Full Manicure</item>
-            <description>Indulge with our signature manicure at Nail Bar. This popular treatment involves nail shape work, a nail strengthening bath and cuticle detail. Hands are lightly exfoliated with our scrub, full of natural protein peelings, working to restore the protective skin layer.
-                Finish with an enriching massage with a moisturizer and polish of your choice.</description>
-            <price>30.00</price>
-        </entree>
-        <entree>
-            <item>File and Polish</item>
-            <description>File and Polish: Our experienced nail technicians will expertly cut and shape your nails,
-                finishing with a polish of your choice. </description>
-            <price>15.00</price>
-        </entree>
-        <entree>
-            <item>Regular Polish</item>
-            <description>Polish: Our experienced nail technicians will expertly paiting your nails
+  <services name="Manicure">
+    <entree>
+      <item>Regular Polish</item>
+      <description>Polish: Our experienced nail technicians will expertly paiting your nails
                 with a polish of your choice. </description>
-            <price>5.00</price>
-        </entree>
-        <entree>
-            <item>Shellac Nails Polish</item>
-            <description>Treat your nails to this unique hybridized nail polish for a flawless finish.
+      <price>5.00</price>
+    </entree>
+    <entree>
+      <item>Shellac Nails Polish</item>
+      <description>Treat your nails to this unique hybridized nail polish for a flawless finish.
                 Shellac nails offers a gentle gel alternative, without sacrificing the long-lasting benefits.
                 As thin as polish, shellac is UV cured for resilient and enviable shine. </description>
-            <price>25.00</price>
-        </entree>
-        <entree>
-            <item>Shellac Nails French Polish</item>
-            <description>The Manicure French Finish treatment. Adorning your nails with the classic french tip finish,
+      <price>25.00</price>
+    </entree>
+    <entree>
+      <item>Shellac Nails French Polish</item>
+      <description>The Manicure French Finish treatment. Adorning your nails with the classic french tip finish,
                 for an elegant finish that lasts no matter your schedule.</description>
-            <price>30.00</price>
-        </entree>
-    </services>
-    <services name="Pedicure">
-        <entree>
-            <item>Full Pedicure</item>
-            <description>Rest and recuperate whilst we breathe life back into your tired feet. A relaxing Jacuzzi bath, with a unique blend of herbs and essential oils, allows you to unwind, followed by callus work, nail clipping, filling and cuticle work for healthy looking toes.
-                Pedi exfoliating foot scrub removes dry and flaking skin, revealing soft and smooth soles.
-                Pedi Skin protectant lotion is massaged into your feet to repair and enrich with essential moisture,
-                finishing off with a paint of polish.</description>
-            <price>50.00</price>
-        </entree>
-        <entree>
-            <item>Mini-Pedicure</item>
-            <description>A quick fix for those on the go our Mini-Manicure restores nails in no time, without compromising on perfection.
+      <price>30.00</price>
+    </entree>
+  </services>
+  <services name="Pedicure">
+    <entree>
+      <item>Mini-Pedicure</item>
+      <description>A quick fix for those on the go our Mini-Manicure restores nails in no time, without compromising on perfection.
                 Enjoy a shape and buff, as well as essential cuticle work before finishing with regular polish.</description>
-            <price>35.00</price>
-        </entree>
-        <entree>
-            <item>Shellac Toes Polish</item>
-            <description>Get sandal ready with our Shellac Toenails treatment. Add a touch of glamour with long-lasting results suitable for the promenade or the dinner party.
+      <price>35.00</price>
+    </entree>
+    <entree>
+      <item>Shellac Toes Polish</item>
+      <description>Get sandal ready with our Shellac Toenails treatment. Add a touch of glamour with long-lasting results suitable for the promenade or the dinner party.
                 Pair with one of our indulgent pedicure experiences for total foot renewal.</description>
-            <price>30.00</price>
-        </entree>
-        <entree>
-            <item>Shellac Toes French Polish</item>
-            <description>The Pedicure French Finish treatment. Adorning your nails with the classic french tip finish,
+      <price>30.00</price>
+    </entree>
+    <entree>
+      <item>Shellac Toes French Polish</item>
+      <description>The Pedicure French Finish treatment. Adorning your nails with the classic french tip finish,
                 for an elegant finish that lasts no matter your schedule.</description>
-            <price>35.00</price>
-        </entree>
-    </services>
-    <services name="Extras">
-        <entree>
-            <item>Refill</item>
-            <description>Refills your gel nails</description>
-            <price>25.00</price>
-        </entree>
-        <entree>
-            <item>Removel Gel Nails</item>
-            <description>Remove gel nails polish.</description>
-            <price>15.00</price>
-        </entree>
-        <entree>
-            <item>Removel Shellac</item>
-            <description>Remove Shellac polish using special non-toxic products</description>
-            <price>8.00</price>
-        </entree>
-    </services>
-    <therapists name="Therapist">
-        <entree>
-            <name>Juliana</name>
-        </entree>
-        <entree>
-            <name>Claire</name>
-        </entree>
-        <entree>
-            <name>Rachel</name>
-        </entree>
-    </therapists>
+      <price>35.00</price>
+    </entree>
+  </services>
+  <services name="Extras">
+    <entree>
+      <item>Refill</item>
+      <description>Refills your gel nails</description>
+      <price>25.00</price>
+    </entree>
+    <entree>
+      <item>Removel Gel Nails</item>
+      <description>Remove gel nails polish.</description>
+      <price>15.00</price>
+    </entree>
+    <entree>
+      <item>Removel Shellac</item>
+      <description>Remove Shellac polish using special non-toxic products</description>
+      <price>8.00</price>
+    </entree>
+  </services>
+  <therapists name="Therapist">
+    <entree>
+      <name>Juliana</name>
+    </entree>
+    <entree>
+      <name>Claire</name>
+    </entree>
+    <entree>
+      <name>Rachel</name>
+    </entree>
+  </therapists>
 </nailbar>

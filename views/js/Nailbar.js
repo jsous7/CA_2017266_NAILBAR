@@ -1,3 +1,6 @@
+/** All the code and subroutines are based on the code of Mikhail Timofeev,
+ * the reference code is on github: https://github.com/mikhail-cct/CA1-In-class-Demo.git */
+
 // returns a number that represents the sum of all the selected menu
 // item prices.
 function calculateBill(idMenuTable) {

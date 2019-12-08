@@ -1,3 +1,6 @@
+/** All the code and subroutines are based on the code of Mikhail Timofeev,
+ * the reference code is on github: https://github.com/mikhail-cct/CA1-In-class-Demo.git */
+
 $(document).ready(function(){
     draw_table();
 })
@@ -30,9 +33,10 @@ function select_row()
         $(".selected").removeClass("selected");
         $(this).addClass("selected");
 
-        var service = $(this).prevAll("tr").children("td[colspan='3']").length - 1;
+        var service = $(this).prevAll("tr").children("td[colspan='4']").length - 1;
         var entree = $(this).attr("id") - 1;
-
+        console.log(service);
+        console.log(entree);
         delete_row(service, entree);
     })
 };
