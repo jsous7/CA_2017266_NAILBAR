@@ -1,39 +1,24 @@
-var http = require('http'),
-    path = require('path'),
-    express = require('express'),
-    fs = require('fs'),
-    xmlParse = require('xslt-processor').xmlParse,
-    xsltProcess = require('xslt-processor').xsltProcess;
-
-var router = express();
-var server = http.createServer(router);
-
-router.use(express.static(path.resolve(__dirname, 'views')));
-
-router.get('/', function(req, res){
-
-    res.render('index');
-
-})
-
-router.get('/get/html', function(req, res) {
-
-    res.writeHead(200, {'Content-Type': 'text/html'});
-
-    var xml = fs.readFileSync('DataSource.xml', 'utf8');
-    var xsl = fs.readFileSync('Structure.xsl', 'utf8');
-    console.log(xml);
-    var doc = xmlParse(xml);
-    var stylesheet = xmlParse(xsl);
-
-    var result = xsltProcess(doc, stylesheet);
-
-    res.end(result.toString());
+/** initialize the services required to make my app to work */
+const http = require('http'), // To protect my code, It is better to use constant instead of variables. It Avoid overwrite the values by accident.
+      path = require('path'),
+      express = require('express');
 
 
-});
+/** Defining some constants */
+const router = express();
+const server = http.createServer(router);
 
-server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function() {
-  var addr = server.address();
+
+/** route bootstrap */
+const routes = require('./routes');
+router.use(express.static(path.resolve(__dirname, 'views')));// Initialize the routes, looks for the default files inside 'views', note that it identifies the file index.html by itself
+router.use(express.urlencoded({extended: true})); //We allow the data sent from the client to be coming in as part of the URL in GET and POST requests
+router.use(express.json()); //We include support for JSON that is coming from the client
+routes(router);//call the router definition
+
+
+/** Initializing the server at localhost:2000 */
+server.listen(process.env.PORT || 2000, process.env.IP || "0.0.0.0", function() {
+  const addr = server.address();
   console.log("Server listening at", addr.address + ":" + addr.port);
 });
