@@ -4,7 +4,7 @@ const Therapists = require('./controllers/therapistsController');
 
 /** Route definition */
 module.exports = (app) => {
-    app.get('*', Main.index);
+    app.get('/', Main.index);
 
     app.get('/services', Services.readAll);
     app.post('/service', Services.create);
