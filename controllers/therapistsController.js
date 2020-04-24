@@ -19,18 +19,50 @@ module.exports = {
     },
 
     readAll: (req, res) => {
-        console.log('Logic to fetch all services');
+        DAO.setCollection('therapistsCollection');
+        DAO.readAll().then((result) => {
+            res.json({result : result});
+        }).catch((errorMessage) => {
+            const error = new Error(errorMessage);
+            error.status = 400;
+            res.json()
+        })
     },
 
     read: (req, res) => {
-        console.log('Logic to fetch one service');
+        DAO.setCollection('therapistsCollection');
+        const id = req.params.id;
+        DAO.read(id).then((result) => {
+            res.json({result : result});
+        }).catch((errorMessage) => {
+            const error = new Error(errorMessage);
+            error.status = 400;
+            res.json()
+        })
     },
 
     update: (req, res) => {
-        console.log('Logic to update a service');
+        DAO.setCollection('therapistsCollection');
+        const id = req.params.id;
+        const userInput = req.body;
+        DAO.update(id, userInput).then((result) => {
+            res.json({result : result});
+        }).catch((errorMessage) => {
+            const error = new Error(errorMessage);
+            error.status = 400;
+            res.json()
+        })
     },
 
     delete: (req, res) => {
-        console.log('Logic to delete a service');
+        DAO.setCollection('therapistsCollection');
+        const id = req.params.id;
+        DAO.delete(id).then((result) => {
+            res.json({result : result});
+        }).catch((errorMessage) => {
+            const error = new Error(errorMessage);
+            error.status = 400;
+            res.json()
+        })
     }
 }

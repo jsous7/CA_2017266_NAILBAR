@@ -16,31 +16,23 @@ module.exports = {
     },
 
     create: (userInput) => {
-        return new Promise((resolve, reject) => {
-            db.getDbInstance().collection(collection).insertOne(userInput, (err, result) => {
-                if (!err) {
-                    resolve(result);
-                    return;
-                }
-                reject('Failed to insert new document');
-                return;
-            });
-        })
+        return db.getDbInstance().collection(collection).insertOne(userInput);
     },
 
     readAll: () => {
-       
+        return db.getDbInstance().collection(collection).find({}).toArray();
     },
 
-    read: () => {
-       
+    read: (id) => {
+        return db.getDbInstance().collection(collection).findOne({_id : db.getPrimaryKey(id)})
     },
 
-    update: () => {
-      
+    update: (id, userInput) => {
+        return db.getDbInstance().collection(collection).findOneAndUpdate({_id : db.getPrimaryKey(id)}, {$set : userInput}, {returnOriginal : true});  
     },
 
     delete: (id) => {
-        
+        return db.getDbInstance().collection(collection).findOneAndDelete({_id : db.getPrimaryKey(id)});
     }
 }
+

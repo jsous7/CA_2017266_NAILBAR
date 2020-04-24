@@ -7,13 +7,13 @@ module.exports = (app) => {
     app.get('/', Main.index);
 
     app.get('/services', Services.readAll);
-    app.post('/service/create', Services.create);
+    app.post('/service', Services.create);
     app.get('/service/:id', Services.read);
     app.patch('/service/:id', Services.update);
     app.delete('/service/:id', Services.delete);
 
     app.get('/therapists', Therapists.readAll);
-    app.post('/therapist/create', Therapists.create);
+    app.post('/therapist', Therapists.create);
     app.get('/therapist/:id', Therapists.read);
     app.patch('/therapist/:id', Therapists.update);
     app.delete('/therapist/:id', Therapists.delete);

@@ -5,6 +5,7 @@ const ObjectID = MongoDb.ObjectID;
 const url="mongodb://localhost:27017";
 const dbName = 'nailbar_mongodb';
 const mongoOptions = {useNewUrlParser : true, useUnifiedTopology: true}
+
 const dbInstance = {
     db : null
 }
