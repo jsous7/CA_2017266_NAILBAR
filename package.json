@@ -2,6 +2,7 @@
   "name": "nailbar",
   "version": "1.0.0",
   "main": "app.js",
+  "run": "node app",
   "scripts": {
     "app": "echo \"Error: no test specified\" && exit 1"
   },
