@@ -2,7 +2,15 @@ const MongoDb = require('mongodb');
 const MongoClient = MongoDb.MongoClient;
 const ObjectID = MongoDb.ObjectID;
 
-const url="mongodb://localhost:27017";
+const dotenv = require('dotenv');
+dotenv.config();
+
+var url = process.env.MONGODB_URL;
+
+if (typeof url === 'undefined') {
+    var url = "mongodb://localhost:27017";
+}
+
 const dbName = 'nailbar_mongodb';
 const mongoOptions = {useNewUrlParser : true, useUnifiedTopology: true}
 
