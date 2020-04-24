@@ -17,7 +17,7 @@ module.exports = {
                     dbInstance.db = client.db(dbName);
                     callBack();
                 } else {
-                    callBack(e);
+                    callBack(err);
                 }
             })
         } else {
