@@ -1,6 +1,21 @@
+const DAO = require('../models/DAO');
+
 module.exports = {
     create: (req, res) => {
-        console.log('Logic to create new service');
+        DAO.setCollection('servicesCollection');
+        const userInput = req.body;
+        DAO.create(userInput).then((result) => {
+            res.json({
+                result : result,
+                document : result.ops[0],
+                msg : "document created sucessfully!",
+                error : null
+            })
+        }).catch((errorMessage) => {
+            const error = new Error(errorMessage);
+            error.status = 400;
+            res.json()
+        });
     },
 
     readAll: (req, res) => {
