@@ -3,50 +3,20 @@ html {
     min-height: 100%;
 }
 body {
-    /* Margin bottom by footer height */
     margin-bottom: 60px;
+}
+td, th {
+    border: 1px solid #ced4da;
+    padding: 0.5rem;
+}
+td {
+    text-align: left;
 }
 .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    /* Set the fixed height of the footer here */
     height: 60px;
-    line-height: 60px; /* Vertically center the text there */
+    line-height: 60px;
     background-color: #f5f5f5;
-}
-table, th, td {
-    border-collapse: collapse;
-    border: 1px solid black;
-    text-align: center;
-}
-table {
-    border-collapse: collapse;
-    width:100%;
-}
-td, th {
-    border: 1px solid #ced4da;
-    padding: 0.5rem;
-    text-align: left;
-}
-th {
-    font-weight: bold;
-}
-.selected {
-    background-color: #dc99dc;
-    color: #5c26ff;
-}
-
-.custom-buttom {
-    background-color: #ffb0dd;
-    color: #5c26ff;
-    border-color: black;
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
-
-.custom-buttom:hover {
-    background-color: #ff69b3;
-    color: #5c26ff;
-    border-color: black;
 }

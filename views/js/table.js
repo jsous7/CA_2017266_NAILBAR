@@ -12,7 +12,7 @@ function draw_table()
     {
         return $.ajax(
             {
-                url: url,
+                url: '/services',
                 type: 'GET',
                 cache: false,
                 success: function (html)
