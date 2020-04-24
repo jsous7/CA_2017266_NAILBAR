@@ -10,6 +10,10 @@ app.use(express.static('views'));
 const routes = require('./routes');
 routes(app);
 
-app.listen(3000, () => {
-  console.log('App listening on port 3000');
+const dotenv = require('dotenv');
+dotenv.config();
+var port = process.env.PORT || 8080;
+
+app.listen(port, () => {
+  console.log('App listening on port: ' + port);
 }) 
