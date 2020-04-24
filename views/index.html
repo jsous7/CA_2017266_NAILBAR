@@ -60,17 +60,31 @@
                         <option value="3">Therapists</option>
                     </select>
                 </div>
+                <!-- Input for services-->
                 <div class="form-group">
                     <input class="form-control" type="text" name="item" placeholder="Item">
                 </div>
                 <div class="form-group">
-                  <input class="form-control" type="text" name="description" placeholder="description">
-              </div>
+                  <input class="form-control" type="text" name="description" placeholder="Description">
+                </div>
                 <div class="form-group">
                     <input class="form-control" type="text" name="price" placeholder="Price">
                 </div>
+                <!-- Input for therapists-->
+                <div class="form-group">
+                  <input class="form-control" type="text" name="therapistName" placeholder="Therapist Name">
+              </div>
+              <div class="form-group">
+                <input class="form-control" type="text" name="therapistBio" placeholder="Therapist Bio">
+              </div>
                 <button type="submit" class="btn btn-primary btn-block custom-buttom">Create new item</button>
             </form>
+        </div>
+
+        <!-- Total price -->
+        <div class="col-lg-4 text-center order-2">
+          <p class="text-primary h4 text-center">Total Price</p>
+          <p class="text-primary h1 text-center" id="totalPrice">00.00</p>
         </div>
 
         <!-- Tables -->
@@ -215,7 +229,7 @@
 
     <footer class="footer">
       <div class="container">
-        <span class="text-muted">Juliana Sousa&copy; 2019</span>
+        <span class="text-muted">Juliana Sousa &copy; 2019</span>
       </div>
     </footer>
 
