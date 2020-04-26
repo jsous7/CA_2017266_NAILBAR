@@ -62,7 +62,7 @@ function createService(){
         }
 
         jsonPost('/service', payload).then(function(){
-            alert('Service created successfully');
+            location.href = '/';
         }).catch(function(){
             alert('Error when creating new service');
         })
@@ -81,7 +81,7 @@ function createTherapist(){
         }
 
         jsonPost('/therapist', payload).then(function() {
-            alert('New therapist inserted successfully!');
+            location.href = '/';
         }).catch(function() {
             alert('Error when creating new therapist');
         });

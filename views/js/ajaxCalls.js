@@ -30,3 +30,18 @@ const jsonGet = function(endPoint) {
         });
     })
 }
+
+const jsonDel = function(endPoint) {
+    return new Promise(function(resolve, reject) {
+        $.ajax({
+            url: endPoint,
+            method: 'DELETE',
+            success: function(success) {
+                resolve(success);
+            },
+            error: function(error) {
+                reject(error);
+            },
+        });
+    })
+}
