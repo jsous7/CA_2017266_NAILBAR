@@ -2,7 +2,6 @@ const Main = require('./controllers/mainController');
 const Services = require('./controllers/servicesController');
 const Therapists = require('./controllers/therapistsController');
 
-/** Route definition */
 module.exports = (app) => {
     app.get('/', Main.index);
 
