@@ -51,33 +51,19 @@
       </div>
         <div id="results" class="col-lg-4 text-center order-3"></div>
         <div class="col-lg-8 text-center order-1 w-75 p-3">
-            <form enctype="application/json" action="/post/json" method="post">
+            <form id="add_new">
                 <div class="form-group">
-                    <select class="form-control" name="sec_n">
-                        <option value="0">Manicure</option>
-                        <option value="1">Pedicure</option>
-                        <option value="2">Extras</option>
-                        <option value="3">Therapists</option>
+                    <select class="form-control" name="select_new_register_type" id="select_new_register_type">
+                        <option value="none">Click to add a service or therapist</option>
+                        <option value="manicure">Add Manicure Services</option>
+                        <option value="pedicure">Add Pedicure Services</option>
+                        <option value="extra">Add Extras Services</option>
+                        <option value="therapist">Add Therapists</option>
                     </select>
                 </div>
-                <!-- Input for services-->
-                <div class="form-group">
-                    <input class="form-control" type="text" name="item" placeholder="Item">
-                </div>
-                <div class="form-group">
-                  <input class="form-control" type="text" name="description" placeholder="Description">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="price" placeholder="Price">
-                </div>
-                <!-- Input for therapists-->
-                <div class="form-group">
-                  <input class="form-control" type="text" name="therapistName" placeholder="Therapist Name">
-              </div>
-              <div class="form-group">
-                <input class="form-control" type="text" name="therapistBio" placeholder="Therapist Bio">
-              </div>
-                <button type="submit" class="btn btn-primary btn-block custom-buttom">Create new item</button>
+
+                <div id="input_container"></div>
+
             </form>
         </div>
 
@@ -236,8 +222,8 @@
   <!-- Bootstrap core JavaScript -->
   <script src="jquery/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/table.js"></script>
-  <script src="js/Nailbar.js"></script>
+  <script src="js/ajaxCalls.js"></script>
+  <script src="js/addServicesOrTherapists.js"></script>
 
 </body>
 
