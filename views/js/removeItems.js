@@ -4,6 +4,8 @@ function deleteService(id){
         jsonDel(url).then(function(){
             window.location = '/';
         }).catch(function(error){
+            console.log(error.status);
+            console.log(error.responseText);
             console.log(error);
         })
     }
@@ -15,6 +17,8 @@ function deleteTherapist(id){
         jsonDel(url).then(function(){
             window.location = '/';
         }).catch(function(error){
+            console.log(error.status);
+            console.log(error.responseText);
             console.log(error);
         })
     }

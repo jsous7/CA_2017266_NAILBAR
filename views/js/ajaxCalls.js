@@ -3,6 +3,7 @@ const jsonPost = function(endPoint, payload) {
         $.ajax({
             url: endPoint,
             method: 'POST',
+            headers: { "apiKey": "ThisIsMyPrivateAPIKey" },
             processData: false,
             data: JSON.stringify(payload),
             contentType: 'application/json',
@@ -21,6 +22,7 @@ const jsonGet = function(endPoint) {
         $.ajax({
             url: endPoint,
             method: 'GET',
+            headers: { "apiKey": "ThisIsMyPrivateAPIKey" },
             success: function(success) {
                 resolve(success);
             },
@@ -36,6 +38,7 @@ const jsonDel = function(endPoint) {
         $.ajax({
             url: endPoint,
             method: 'DELETE',
+            headers: { "apiKey": "ThisIsMyPrivateAPIKey" },
             success: function(success) {
                 resolve(success);
             },
@@ -51,6 +54,7 @@ const jsonEdit = function(endPoint, payload) {
         $.ajax({
             url: endPoint,
             method: 'PATCH',
+            headers: { "apiKey": "ThisIsMyPrivateAPIKey" },
             processData: false,
             data: JSON.stringify(payload),
             contentType: 'application/json',

@@ -33,9 +33,14 @@ function editService(id){
                 window.location = '/';
             }).catch(function(){
                 alert('Error when editing service');
+                console.log(error.status);
+                console.log(error.responseText);
+                console.log(error);
             })
         });
     }).catch(function(error){
+        console.log(error.status);
+        console.log(error.responseText);
         console.log(error);
     })
 }
@@ -70,9 +75,14 @@ function editTherapist(id){
                 window.location = '/';
             }).catch(function(){
                 alert('Error when editing therapist');
+                console.log(error.status);
+                console.log(error.responseText);
+                console.log(error);
             })
         });
     }).catch(function(error){
+        console.log(error.status);
+        console.log(error.responseText);
         console.log(error);
     })
 }

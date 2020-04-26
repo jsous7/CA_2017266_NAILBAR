@@ -25,6 +25,8 @@
             }
         }
     }).catch(function(error){
+        console.log(error.status);
+        console.log(error.responseText);
         console.log(error);
     })
 
@@ -42,6 +44,8 @@
             );
         }
     }).catch(function(error){
+        console.log(error.status);
+        console.log(error.responseText);
         console.log(error);
     })
 })()

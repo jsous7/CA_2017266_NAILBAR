@@ -1,7 +1,9 @@
 const DAO = require('../models/DAO');
+const apiKeyValidator = require('../models/apiKeyValidator');
 
 module.exports = {
     create: (req, res) => {
+        apiKeyValidator.validateKey(req, res);
         DAO.setCollection('therapistsCollection');
         const userInput = req.body;
         DAO.create(userInput).then((result) => {
@@ -19,6 +21,7 @@ module.exports = {
     },
 
     readAll: (req, res) => {
+        apiKeyValidator.validateKey(req, res);
         DAO.setCollection('therapistsCollection');
         DAO.readAll().then((result) => {
             res.json({result : result});
@@ -30,6 +33,7 @@ module.exports = {
     },
 
     read: (req, res) => {
+        apiKeyValidator.validateKey(req, res);
         DAO.setCollection('therapistsCollection');
         const id = req.params.id;
         DAO.read(id).then((result) => {
@@ -42,6 +46,7 @@ module.exports = {
     },
 
     update: (req, res) => {
+        apiKeyValidator.validateKey(req, res);
         DAO.setCollection('therapistsCollection');
         const id = req.params.id;
         const userInput = req.body;
@@ -55,6 +60,7 @@ module.exports = {
     },
 
     delete: (req, res) => {
+        apiKeyValidator.validateKey(req, res);
         DAO.setCollection('therapistsCollection');
         const id = req.params.id;
         DAO.delete(id).then((result) => {
