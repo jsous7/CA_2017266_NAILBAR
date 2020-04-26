@@ -11,8 +11,9 @@
                     <button type="submit" id="delete" onclick="deleteService('${serverResponse.result[i]._id}')" class="btn btn-block btn-danger custom-buttom">Delete</button>
                 </td>
             </tr>`;
+            
             if (serverResponse.result[i].type === 'manicure') {
-                $('#table_body_manicure').append(tbodyTemplatev);
+                $('#table_body_manicure').append(tbodyTemplate);
             }
 
             if (serverResponse.result[i].type === 'pedicure') {

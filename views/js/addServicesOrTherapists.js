@@ -1,13 +1,13 @@
 // Logic for select button
 defaultInputs =
 `<div class="form-group">
-    <input class="form-control" type="text" name="item" placeholder="Item" id="item">
+    <input class="form-control" type="text" name="item" placeholder="Item" id="item" required>
 </div>
 <div class="form-group">
-    <input class="form-control" type="text" name="description" placeholder="Description" id="description">
+    <input class="form-control" type="text" name="description" placeholder="Description" id="description" required>
 </div>
 <div class="form-group">
-    <input class="form-control" type="text" name="price" placeholder="Price" id="price">
+    <input class="form-control" type="number" name="price" step="0.01" min="0" max="10" placeholder="Price" id="price" required>
 </div>
 <div class="form-group">
     <input type="hidden" name="service_type" id="service_type">
@@ -16,10 +16,10 @@ defaultInputs =
 
 therapistsInputs =
 `<div class="form-group">
-    <input class="form-control" type="text" name="therapist_name" placeholder="Therapist Name" id="therapist_name">
+    <input class="form-control" type="text" name="therapist_name" placeholder="Therapist Name" id="therapist_name" required>
 </div>
 <div class="form-group">
-    <input class="form-control" type="text" name="therapist_bio" placeholder="Therapist Bio" id="therapist_bio">
+    <input class="form-control" type="text" name="therapist_bio" placeholder="Therapist Bio" id="therapist_bio" required>
 </div>
 <div class="form-group">
     <button type="submit" class="btn btn-primary btn-block custom-buttom" id="create_new_therapist">Create new therapist</button>
