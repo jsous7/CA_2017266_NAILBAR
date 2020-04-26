@@ -6,3 +6,15 @@ td {
     height: 60px;
     line-height: 60px;
 }
+.nav-link{
+    cursor: pointer;
+}
+.top{
+    text-align: center;
+    padding: 10px;
+    color:white;
+    background-color: dimgrey;
+    width: 100px;
+    position: fixed;
+    cursor: pointer
+}

@@ -45,3 +45,21 @@ const jsonDel = function(endPoint) {
         });
     })
 }
+
+const jsonEdit = function(endPoint, payload) {
+    return new Promise(function(resolve, reject) {
+        $.ajax({
+            url: endPoint,
+            method: 'PATCH',
+            processData: false,
+            data: JSON.stringify(payload),
+            contentType: 'application/json',
+            success: function(success) {
+                resolve(success);
+            },
+            error: function(error) {
+                reject(error);
+            },
+        });
+    })
+}

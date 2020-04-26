@@ -7,7 +7,7 @@ defaultInputs =
     <input class="form-control" type="text" name="description" placeholder="Description" id="description">
 </div>
 <div class="form-group">
-    <input class="form-control" type="text" name="price" placeholder="Price"id="price">
+    <input class="form-control" type="text" name="price" placeholder="Price" id="price">
 </div>
 <div class="form-group">
     <input type="hidden" name="service_type" id="service_type">
@@ -25,6 +25,7 @@ therapistsInputs =
     <button type="submit" class="btn btn-primary btn-block custom-buttom" id="create_new_therapist">Create new therapist</button>
 </div>`;
 
+$('#select_new_register_type option[value="none"]').prop( "disabled", true )
 var select = $("#select_new_register_type");
 select.change(function(){
     switch(select.val()) {
@@ -62,7 +63,7 @@ function createService(){
         }
 
         jsonPost('/service', payload).then(function(){
-            location.href = '/';
+            window.location = '/';
         }).catch(function(){
             alert('Error when creating new service');
         })
@@ -81,7 +82,7 @@ function createTherapist(){
         }
 
         jsonPost('/therapist', payload).then(function() {
-            location.href = '/';
+            window.location = '/';
         }).catch(function() {
             alert('Error when creating new therapist');
         });
