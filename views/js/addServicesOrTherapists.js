@@ -65,10 +65,9 @@ function createService(){
         jsonPost('/service', payload).then(function(){
             window.location = '/';
         }).catch(function(){
-            alert('Error when creating new service');
+            console.log('Error when creating new service');
         })
     });
-
 }
 
 function createTherapist(){
@@ -84,7 +83,7 @@ function createTherapist(){
         jsonPost('/therapist', payload).then(function() {
             window.location = '/';
         }).catch(function() {
-            alert('Error when creating new therapist');
+            console.log('Error when creating new therapist');
         });
     });
 }
