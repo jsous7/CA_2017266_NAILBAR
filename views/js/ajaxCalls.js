@@ -15,3 +15,18 @@ const jsonPost = function(endPoint, payload) {
         });
     })
 }
+
+const jsonGet = function(endPoint) {
+    return new Promise(function(resolve, reject) {
+        $.ajax({
+            url: endPoint,
+            method: 'GET',
+            success: function(success) {
+                resolve(success);
+            },
+            error: function(error) {
+                reject(error);
+            },
+        });
+    })
+}
