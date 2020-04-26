@@ -67,7 +67,7 @@ function editTherapist(id){
             }
     
             jsonEdit('/therapist/'+id, payload).then(function(){
-                window.location = '/#therapists';
+                window.location = '/';
             }).catch(function(){
                 alert('Error when editing therapist');
             })
@@ -79,7 +79,6 @@ function editTherapist(id){
 
 function showCancelButton(){
     $('#input_container').append(`<button class="btn btn-warning btn-block custom-buttom" id="cancel">Cancel Changes</button>`);
-        
         $('#cancel').click(function(){
             window.location = '/';
         })
