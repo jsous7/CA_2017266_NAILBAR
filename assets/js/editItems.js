@@ -88,7 +88,7 @@ function editTherapist(id){
 }
 
 function showCancelButton(){
-    $('#input_container').append(`<button class="btn btn-warning btn-block custom-buttom" id="cancel">Cancel Changes</button>`);
+    $('#input_container').append(`<button class="btn btn-warning btn-block custom-buttom" id="cancel">Cancel</button>`);
         $('#cancel').click(function(){
             window.location = '/';
         })

@@ -37,12 +37,14 @@ select.change(function(){
         case "extra":
             $('#input_container').empty();
             $('#input_container').append(defaultInputs);
+            showCancelButton();
             $('#service_type').val(select.val());
             createService();
             break;
         case "therapist":
             $('#input_container').empty();
             $('#input_container').append(therapistsInputs);
+            showCancelButton();
             createTherapist();
             break;
       }
