@@ -2,7 +2,7 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
 app.use(bodyParser.json());
-app.use(express.static('views'));
+app.use(express.static('assets'));
 
 const routes = require('./routes');
 routes(app);

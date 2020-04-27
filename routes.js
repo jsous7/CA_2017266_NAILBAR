@@ -1,9 +1,21 @@
 const Main = require('./controllers/mainController');
 const Services = require('./controllers/servicesController');
 const Therapists = require('./controllers/therapistsController');
+const apiKeyValidator = require('./models/apiKeyValidator');
 
 module.exports = (app) => {
     app.get('/', Main.index);
+
+    app.use((req, res, next) => {
+        next();
+        return;
+        if (!apiKeyValidator.validateKey(req.headers.apikey)) {
+            console.log("invalid api key");
+            res.status(401).send({error: " invalid api key"}).end();
+            return;
+        }
+        next();
+    })
 
     app.get('/services', Services.readAll);
     app.post('/service', Services.create);
