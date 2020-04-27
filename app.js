@@ -1,13 +1,14 @@
-const bodyParser = require('body-parser');
 const express = require('express');
+const bodyParser = require('body-parser');
+const routes = require('./routes');
+const dotenv = require('dotenv');
+
 const app = express();
 app.use(bodyParser.json());
 app.use(express.static('assets'));
 
-const routes = require('./routes');
 routes(app);
 
-const dotenv = require('dotenv');
 dotenv.config();
 var port = process.env.PORT || 8080;
 
